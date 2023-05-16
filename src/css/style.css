@@ -3,12 +3,17 @@ body {
     max-width: 100%;
     height: 100%;
     margin: 0 auto;
-    background: linear-gradient(to bottom, rgb(148, 193, 227), rgb(77, 77, 180));
+    background-image: url(../imagens/BG-LIGHT.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     color: #333333;
+    overflow: hidden;
+
 }
 
+
 body.dark-mode {
-    background: linear-gradient(to bottom, rgb(48, 92, 124), rgb(33, 33, 95));
+    background-image: url(../imagens/BG-DARK.jpeg);
     color: #f5f5f5;
 }
 
@@ -17,14 +22,15 @@ main {
     max-width: 80%;
     margin: 0 auto;
     color: #333333;
+    max-height: 100vh;
+    overflow-y: auto;
 }
 
-
 header {
-    background-color: rgb(202, 202, 202);
     display: flex;
     justify-content: space-between;
     padding: 25px;
+    padding-right: 75px;
 }
 
 body .dark-mode header {
@@ -34,9 +40,8 @@ body .dark-mode header {
 
 header .logo,
 header .img-button {
-    width: 30px;
+    width: 100px;
     transition: 0.2s ease-in-out;
-    float: bottom;
 }
 
 .center {
@@ -51,7 +56,8 @@ header .img-button {
 }
 
 header #theme {
-    width: 30px;
+    width: 50px;
+    padding-right: 50px;
     border: none;
     background: none;
     cursor: pointer;
@@ -60,7 +66,7 @@ header #theme {
 header .logo:hover,
 header .img-button:hover,
 main .card:hover {
-    transform: scale(1.15);
+    transform: scale(1.10);
     cursor: pointer;
 }
 
@@ -76,64 +82,64 @@ main {
 }
 
 .card {
-    background-color: antiquewhite;
-    width: 200px;
+    background-color: #d8e3ec;
+    width: 250px;
+    height: 400px;
     padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
     border-radius: 15px;
-    transition: 0.2s ease-in-out;
     border: 1px solid #333333;
 }
 
 .dark-mode .card {
-    background-color: gray;
+    background-color: #a8a8a8;
 }
 
 main .grass:hover {
-    background: linear-gradient(to bottom, rgb(0, 255, 34), rgb(7, 94, 19));
+    background: linear-gradient(to bottom, rgb(133, 218, 144), rgb(39, 122, 50));
     color: whitesmoke;
 }
 
 main .fire:hover {
-    background: linear-gradient(to bottom, orange, rgb(189, 64, 1));
+    background: linear-gradient(to bottom, rgb(255, 189, 67), rgb(149, 74, 36));
     color: whitesmoke;
 }
 
 main .fighting:hover {
-    background: linear-gradient(to bottom, red, rgb(101, 5, 5));
+    background: linear-gradient(to bottom, rgb(253, 100, 100), rgb(165, 33, 33));
     color: whitesmoke;
 }
 
 main .water:hover {
-    background: linear-gradient(to bottom, lightskyblue, rgb(48, 107, 144));
+    background: linear-gradient(to bottom, rgb(144, 200, 235), rgb(45, 103, 140));
     color: whitesmoke;
 }
 
 main .ice:hover {
-    background: linear-gradient(to bottom, rgb(171, 223, 255), rgb(0, 242, 255));
+    background: linear-gradient(to bottom, rgb(167, 218, 249), rgb(57, 147, 154));
     color: whitesmoke;
 }
 
 main .bug:hover {
-    background: linear-gradient(to bottom, rgb(161, 211, 161), rgb(91, 120, 91));
+    background: linear-gradient(to bottom, rgb(162, 228, 162), rgb(80, 105, 80));
     color: whitesmoke;
 }
 
 main .normal:hover {
-    background: linear-gradient(to bottom, rgb(229, 229, 229), rgb(128, 128, 128));
+    background: linear-gradient(to bottom, rgb(183, 183, 183), rgba(123, 122, 122, 0.709));
     color: whitesmoke;
 }
 
 main .poison:hover {
-    background: linear-gradient(to bottom, rgb(209, 95, 209), rgb(110, 52, 110));
+    background: linear-gradient(to bottom, rgb(196, 100, 196), rgb(113, 44, 113));
     color: whitesmoke;
 }
 
 main .eletric:hover {
-    background: linear-gradient(to bottom, rgb(251, 255, 1), rgb(212, 192, 10));
+    background: linear-gradient(to bottom, rgb(206, 208, 101), rgb(205, 166, 69));
     color: whitesmoke;
 }
 
@@ -143,17 +149,17 @@ main .ground:hover {
 }
 
 main .psychic:hover {
-    background: linear-gradient(to bottom, rgb(244, 97, 219), rgb(151, 89, 141));
+    background: linear-gradient(to bottom, rgb(253, 93, 226), rgba(168, 61, 148, 0.824));
     color: whitesmoke;
 }
 
 main .fairy:hover {
-    background: linear-gradient(to bottom, rgb(240, 154, 225), rgb(224, 7, 188));
+    background: linear-gradient(to bottom, rgb(240, 154, 225), rgb(166, 40, 143));
     color: whitesmoke;
 }
 
 main .dragon:hover {
-    background: linear-gradient(to bottom, blue, rgb(15, 15, 92));
+    background: linear-gradient(to bottom, rgb(90, 90, 254), rgb(44, 44, 106));
     color: whitesmoke;
 }
 
@@ -190,7 +196,7 @@ main .card .type {
 }
 
 .Grama {
-    background-color: rgb(0, 128, 0);
+    background-color: rgb(0, 190, 0);
     /* verde */
 }
 
@@ -275,27 +281,10 @@ main .card .type {
 }
 
 main .Details {
-    max-height: 60px;
+    max-height: 110px;
     overflow-y: scroll;
     font-size: 14px;
     padding-right: 10px;
-}
-
-main *::-webkit-scrollbar {
-    width: 12px;
-
-}
-
-main *::-webkit-scrollbar-track {
-    background-color: aliceblue;
-    border-radius: 10px;
-
-}
-
-main *::-webkit-scrollbar-thumb {
-    background-color: blueviolet;
-    border-radius: 10px;
-    border: 3px solid #ffffff;
 }
 
 .shiny-img {
