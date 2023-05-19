@@ -5,17 +5,6 @@ html {
   padding: 0;
 }
 
-.door-left,
-.door-right {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 67%;
-  background-color: #ed1c24;
-  transform-origin: center;
-  transition: background-color 0.3s ease;
-}
-
 .door-left {
   left: 0;
   animation: open-door-left 3s forwards;
@@ -28,26 +17,60 @@ html {
   clip-path: polygon(40% 0, 100% 0, 100% 100%, 40% 100%, 0 100%);
 }
 
-.door-left::before,
+.door-left,
+.door-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60%;
+  background-color: #ed1c24;
+  transform-origin: center;
+  transition: background-color 0.3s ease;
+}
+
 .door-right::before {
   content: "";
   position: absolute;
   top: 5%;
-  left: 5%;
-  width: 90%;
+  left: 0%;
+  width: 95%;
   height: 90%;
   background-color: #b0b0b0;
   z-index: 1;
 }
 
-.door-left::after,
+.door-left::before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 100%;
+  height: 90%;
+  border-right: 100px solid #b0b0b0;
+  background-color: #b0b0b0;
+  z-index: 1;
+}
+
+
 .door-right::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  width: 80%;
+  height: 70%;
+  background-color: #696969;
+  z-index: 2;
+}
+
+.door-left::after {
   content: "";
   position: absolute;
   top: 15%;
   left: 15%;
   width: 70%;
   height: 70%;
+  border-right: 100px solid #696969;
   background-color: #696969;
   z-index: 2;
 }

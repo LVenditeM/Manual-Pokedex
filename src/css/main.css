@@ -30,7 +30,12 @@ header {
     padding-right: 75px;
 }
 
-header .logo,
+header .logo {
+    width: 115px;
+    margin-top: 10%;
+    transition: 0.2s ease-in-out;
+}
+
 header .img-button {
     width: 100px;
     transition: 0.2s ease-in-out;
@@ -49,7 +54,11 @@ header #theme {
 }
 
 header .logo:hover,
-header .img-button:hover,
+header .img-button:hover {
+    transform: scale(1.20);
+    cursor: pointer;
+}
+
 main .card:hover {
     transform: scale(1.10);
     cursor: pointer;
